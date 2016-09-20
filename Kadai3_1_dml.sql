@@ -1,0 +1,11 @@
+2.	insert into book values ('0001', 'ƒWƒƒƒ“ƒ‹‚P' ,'ƒ^ƒCƒgƒ‹‚P' ,1000 ,'’˜Ò‚P' ,'o”ÅĞ‚P' ,'20160901' ,'20160901');
+3.	select * from book;
+4.	select title, author, price from book where id = '0001';
+5.	select title from book where genre in ('ƒWƒƒƒ“ƒ‹‚P', 'ƒWƒƒƒ“ƒ‹N');
+6.	select title from book where author = '’˜Ò‚P';
+7.	select title, price from book where publisher = 'o”ÅĞ‚P' and author = '’˜Ò‚P';
+8.	update book set genre = 'VƒWƒƒƒ“ƒ‹‚P', update_date = '20160920' where id = '0001';
+9.	update book set price = 1080, update_date = '20160920' where title in ('ƒ^ƒCƒgƒ‹‚P', 'ƒ^ƒCƒgƒ‹‚m');
+10.	delete from book where id = '0001';
+11.	delete from book where author = '’˜Ò‚P' and publisher = 'o”ÅĞ‚P';
+12.	select count(*) from book where publisher = 'o”ÅĞ‚P';

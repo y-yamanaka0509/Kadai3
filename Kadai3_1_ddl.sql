@@ -1,0 +1,1 @@
+create table book (id varchar(4) NOT NULL PRIMARY KEY, genre varchar(20), title varchar(50), price int, author varchar(20), publisher varchar(20), entry_date varchar(8), update_date varchar(8));
