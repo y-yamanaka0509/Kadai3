@@ -1,0 +1,2 @@
+create table library (libraryID varchar(4) NOT NULL PRIMARY KEY, libraryName varchar(20));
+create table library_book (id varchar(4) NOT NULL PRIMARY KEY, libraryID varchar(4) NOT NULL, bookID varchar(4) NOT NULL);
