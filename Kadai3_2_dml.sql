@@ -1,4 +1,14 @@
 2.	insert into library values ('0001', '‚`}‘ŠÙ');
+	insert into library values ('0002', '‚a}‘ŠÙ');
+	insert into library values ('0003', '‚b}‘ŠÙ');
 3.	insert into library_book values ('0001', '0001', '0001');
-4.	select libraryID, count(*) from library_book group by libraryID;
-5.	select t1.libraryID from library_book t1 inner join book t2 on t1.bookID = t2.id where t2.title = 'ƒ^ƒCƒgƒ‹‚P';
+	insert into library_book values ('0002', '0001', '0002');
+	insert into library_book values ('0003', '0001', '0003');
+	insert into library_book values ('0004', '0002', '0001');
+	insert into library_book values ('0005', '0002', '0004');
+	insert into library_book values ('0006', '0002', '0005');
+	insert into library_book values ('0007', '0003', '0002');
+	insert into library_book values ('0008', '0003', '0003');
+	insert into library_book values ('0009', '0003', '0006');
+4.	select t1.library_id, t2.library_name, count(*) from library_book t1 inner join library t2 on t1.library_id = t2.library_id group by t1.library_id, t2.library_name;
+5.	select t1.library_id, t2.library_name from library_book t1 inner join library t2 on t1.library_id = t2.library_id inner join book t3 on t1.book_id = t3.id where t3.title = 'ƒ^ƒCƒgƒ‹‚P';
